@@ -1,11 +1,11 @@
-class Guide {
+class HelpGuide {
   final int id;
   final String title;
   final String category;
   final String coverImage;
   final String content;
 
-  Guide({
+  HelpGuide({
     required this.id,
     required this.title,
     required this.category,
@@ -13,13 +13,13 @@ class Guide {
     required this.content,
   });
 
-  factory Guide.fromJson(Map<String, dynamic> json) {
-    return Guide(
+  factory HelpGuide.fromJson(Map<String, dynamic> json) {
+    return HelpGuide(
       id: json['id'] as int,
       title: json['title'] as String,
       category: json['category'] as String,
       coverImage: json['cover_image'] as String,
-      content: json['content_path'] as String,
+      content: json['content'] as String,
     );
   }
 
