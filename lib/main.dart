@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ui/screens/call_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -113,10 +114,16 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => CallScreen(),
+            ),
+          );
+        },
+        tooltip: 'New Page',
+        child: const Icon(Icons.navigate_next),
+      ),
     );
   }
 }
