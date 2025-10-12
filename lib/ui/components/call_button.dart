@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CallButton extends StatelessWidget
 {
@@ -19,8 +20,21 @@ class CallButton extends StatelessWidget
 		return ElevatedButton.icon (onPressed: makeCall, style: style, icon: image, label: label);
 	}
 
-	void makeCall()
+	Future<void> makeCall() async
 	{
-		// Implementar a funcionalidade de chamada aqui
+			final Uri launchUri = Uri(
+				scheme: 'tel',
+				path: '190',
+			);
+
+			if (await canLaunchUrl(launchUri))
+			{
+				await launchUrl(launchUri);
+			}
+			else
+			{
+				// Handle the case where the URL cannot be launched (e.g., no phone app)
+				throw 'Could not launch 190';
+			}
 	}
 }
