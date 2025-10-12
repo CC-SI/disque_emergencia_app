@@ -42,7 +42,7 @@ class CallButton extends StatelessWidget
 			padding: EdgeInsets.all(15),
 			backgroundColor: service.color,
 			foregroundColor: Colors.black,
-			minimumSize: Size(150, 150),
+			minimumSize: Size(200, 200),
 			side: BorderSide(
 			width: 4.0,
 			color: Colors.grey,

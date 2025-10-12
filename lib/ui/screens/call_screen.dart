@@ -17,23 +17,63 @@ class CallScreen extends StatelessWidget
 		CallButton firemanButton = CallButton(service: services[1]);
 		CallButton samuButton = CallButton(service: services[2]);
 		CallButton civilDefenseButton = CallButton(service: services[3]);
+		CallButton contactButton = CallScreen.getContactButton();
+
+		SizedBox spacer = SizedBox(height: 40, width: 20);
+
+		Text message = Text( "Selecione o serviço de emergência",
+			style: TextStyle(
+				fontSize: 28.0,
+				fontWeight: FontWeight.bold,
+				color: Colors.white,
+				decoration: TextDecoration.none,
+			)
+		);
+
+		Row firstRow = Row(
+			mainAxisAlignment: MainAxisAlignment.center,
+			children: <Widget>[
+				policeButton,
+				spacer,
+				firemanButton,
+			],
+		);
+		Row secondRow = Row(
+			mainAxisAlignment: MainAxisAlignment.center,
+			children: <Widget>[
+				samuButton,
+				spacer,
+				civilDefenseButton,
+			],
+		);
 
 		Container container = Container(color: Theme.of(context).primaryColor,
 			child: Column(
 				mainAxisAlignment: MainAxisAlignment.center,
 				children: <Widget>[
-					Text(
-						'Tela de Discagem de Emergência',
-						style: Theme.of(context).textTheme.headlineMedium,
-					),
-					policeButton,
-					firemanButton,
-					samuButton,
-					civilDefenseButton,
+					message,
+					spacer,
+					firstRow,
+					spacer,
+					secondRow,
+					spacer,
+					contactButton,
 				],
 			)
 		);
 		return container;
+	}
+
+	static CallButton getContactButton()
+	{
+		EmergencyService contactService = EmergencyService(
+			name: 'Contato de Emergência',
+			// TODO: Pegar número do contato de emergência
+			phoneNumber: '000000000',
+			icon: Image.asset('lib/assets/images/icones/contato.png'),
+			color: Colors.purple,
+		);
+		return CallButton(service: contactService);
 	}
 
 	static List<EmergencyService> loadEmergencyServices()
