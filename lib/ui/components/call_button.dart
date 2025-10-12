@@ -1,27 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/data/models/emergency_service.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CallButton extends StatelessWidget
 {
-	const CallButton({super.key});
+	const CallButton({super.key, required this.service});
+
+	final EmergencyService service;
 
 	@override
 	Widget build(BuildContext context)
 	{
 		// Texto
-		Text name = Text('Policia',
+		Text name = Text(service.name,
 			style: TextStyle(
 				fontSize: 24.0, // Sets the font size to 24 logical pixels
 				),
 		);
-		Text number = Text('190',
+		Text number = Text(service.phoneNumber,
 			style: TextStyle(
 				fontSize: 24.0, // Sets the font size to 24 logical pixels
 			),
 		);
 
 		// Ícone
-		Image image = Image(image: AssetImage('lib/assets/images/icones/policia.png'));
+		Image image = Image(image: service.icon.image);
 
 		// Layout
 		Column column = Column(
@@ -37,7 +40,7 @@ class CallButton extends StatelessWidget
 				borderRadius: BorderRadius.circular(5),
 			),
 			padding: EdgeInsets.all(15),
-			backgroundColor: Colors.red,
+			backgroundColor: service.color,
 			foregroundColor: Colors.black,
 			minimumSize: Size(150, 150),
 			side: BorderSide(
@@ -53,7 +56,7 @@ class CallButton extends StatelessWidget
 	{
 			final Uri launchUri = Uri(
 				scheme: 'tel',
-				path: '190',
+				path: service.phoneNumber,
 			);
 
 			if (await canLaunchUrl(launchUri))
@@ -63,7 +66,7 @@ class CallButton extends StatelessWidget
 			else
 			{
 				// Handle the case where the URL cannot be launched (e.g., no phone app)
-				throw 'Could not launch 190';
+				throw 'Could not launch ${service.phoneNumber}';
 			}
 	}
 }
