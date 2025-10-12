@@ -8,16 +8,45 @@ class CallButton extends StatelessWidget
 	@override
 	Widget build(BuildContext context)
 	{
-		Text label = Text('Ligar');
+		// Texto
+		Text name = Text('Policia',
+			style: TextStyle(
+				fontSize: 24.0, // Sets the font size to 24 logical pixels
+				),
+		);
+		Text number = Text('190',
+			style: TextStyle(
+				fontSize: 24.0, // Sets the font size to 24 logical pixels
+			),
+		);
 
+		// Ícone
 		Image image = Image(image: AssetImage('lib/assets/images/icones/policia.png'));
+
+		// Layout
+		Column column = Column(
+			mainAxisAlignment: MainAxisAlignment.center,
+			children: <Widget>[
+				image,
+				name,
+				number,
+			],
+		);
 		ButtonStyle style = ElevatedButton.styleFrom(
 			shape: RoundedRectangleBorder(
 				borderRadius: BorderRadius.circular(5),
-			)
+			),
+			padding: EdgeInsets.all(15),
+			backgroundColor: Colors.red,
+			foregroundColor: Colors.black,
+			minimumSize: Size(150, 150),
+			side: BorderSide(
+			width: 4.0,
+			color: Colors.grey,
+			),
 		);
 
-		return ElevatedButton.icon (onPressed: makeCall, style: style, icon: image, label: label);
+		return ElevatedButton (onPressed: makeCall, style: style, child: column);
 	}
 
 	Future<void> makeCall() async
