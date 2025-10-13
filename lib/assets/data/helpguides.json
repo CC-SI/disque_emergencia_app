@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Como agir em caso de incêndio",
+    "category": "Emergências",
+    "cover_image": "assets/images/helpguides/1/screen.png",
+    "content": "assets/data/helpguides_md/1/content.md"
+  },
+  {
+    "id": 2,
+    "title": "O que fazer em acidentes de trânsito",
+    "category": "Emergências",
+    "cover_image": "assets/images/helpguides/2/cover.png",
+    "content": "assets/data/helpguides_md/2/content.md"
+  }
+]
