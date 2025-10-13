@@ -2,7 +2,7 @@ import '../models/helpguide_model.dart';
 import '../providers/helpguide_provider.dart';
 import 'package:collection/collection.dart';
 
-class HelpRepository {
+class HelpGuideRepository {
   final HelpGuideProvider _provider = HelpGuideProvider();
 
   Future<List<HelpGuide>> loadGuides() => _provider.loadGuides();
