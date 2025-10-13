@@ -25,7 +25,7 @@ class CallScreen extends StatelessWidget
 			style: TextStyle(
 				fontSize: 28.0,
 				fontWeight: FontWeight.bold,
-				color: Colors.white,
+				color: const Color.fromARGB(255, 237, 51, 51),
 				decoration: TextDecoration.none,
 			)
 		);
@@ -33,21 +33,21 @@ class CallScreen extends StatelessWidget
 		Row firstRow = Row(
 			mainAxisAlignment: MainAxisAlignment.center,
 			children: <Widget>[
-				policeButton,
-				spacer,
 				firemanButton,
+				spacer,
+				samuButton,
 			],
 		);
 		Row secondRow = Row(
 			mainAxisAlignment: MainAxisAlignment.center,
 			children: <Widget>[
-				samuButton,
+				policeButton,
 				spacer,
 				civilDefenseButton,
 			],
 		);
 
-		Container container = Container(color: Theme.of(context).primaryColor,
+		Container container = Container(color: Colors.white,
 			child: Column(
 				mainAxisAlignment: MainAxisAlignment.center,
 				children: <Widget>[
@@ -71,7 +71,7 @@ class CallScreen extends StatelessWidget
 			// TODO: Pegar número do contato de emergência
 			phoneNumber: '000000000',
 			icon: Image.asset('lib/assets/images/icones/contato.png'),
-			color: const Color.fromARGB(255, 239, 233, 240),
+			color: const Color.fromARGB(255, 31, 159, 31),
 		);
 		return CallButton(service: contactService);
 	}
@@ -84,7 +84,7 @@ class CallScreen extends StatelessWidget
 				name: 'Polícia',
 				phoneNumber: '190',
 				icon: Image.asset('lib/assets/images/icones/policia.png'),
-				color: Colors.blue,
+				color: const Color.fromARGB(255,79, 81, 216),
 			),
 
 			// Bombeiros
@@ -92,7 +92,7 @@ class CallScreen extends StatelessWidget
 				name: 'Bombeiros',
 				phoneNumber: '193',
 				icon: Image.asset('lib/assets/images/icones/bombeiro.png'),
-				color: Colors.red,
+				color: const Color.fromARGB(255, 237, 51, 51),
 			),
 
 			// SAMU
@@ -100,7 +100,7 @@ class CallScreen extends StatelessWidget
 				name: 'SAMU',
 				phoneNumber: '192',
 				icon: Image.asset('lib/assets/images/icones/samu.png'),
-				color: const Color.fromARGB(255, 219, 137, 14),
+				color: const Color.fromARGB(255, 88, 154, 229),
 			),
 
 			// Defesa Civil
@@ -108,7 +108,7 @@ class CallScreen extends StatelessWidget
 				name: 'Defesa Civil',
 				phoneNumber: '199',
 				icon: Image.asset('lib/assets/images/icones/defesa_civil.png'),
-				color: Colors.green,
+				color: const Color.fromARGB(255, 255, 124, 43),
 			),
 		];
 	}

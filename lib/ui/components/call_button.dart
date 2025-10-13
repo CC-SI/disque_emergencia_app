@@ -14,12 +14,14 @@ class CallButton extends StatelessWidget
 		// Texto
 		Text name = Text(service.name,
 			style: TextStyle(
-				fontSize: 24.0, // Sets the font size to 24 logical pixels
+				fontSize: 24.0,
+        fontWeight: FontWeight.bold,
 				),
 		);
 		Text number = Text(service.phoneNumber,
 			style: TextStyle(
-				fontSize: 24.0, // Sets the font size to 24 logical pixels
+				fontSize: 24.0, 
+        fontWeight: FontWeight.bold,
 			),
 		);
 
