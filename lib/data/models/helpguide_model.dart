@@ -1,6 +1,7 @@
 class HelpGuide {
   final int id;
   final String title;
+  final String subtitle;
   final String category;
   final String coverImage;
   final String content;
@@ -8,6 +9,7 @@ class HelpGuide {
   HelpGuide({
     required this.id,
     required this.title,
+    required this.subtitle,
     required this.category,
     required this.coverImage,
     required this.content,
@@ -17,6 +19,7 @@ class HelpGuide {
     return HelpGuide(
       id: json['id'] as int,
       title: json['title'] as String,
+      subtitle: json['subtitle'] as String,
       category: json['category'] as String,
       coverImage: json['cover_image'] as String,
       content: json['content'] as String,
@@ -27,6 +30,7 @@ class HelpGuide {
     return {
       'id': id,
       'title': title,
+      'subtitle': subtitle,
       'category': category,
       'cover_image': coverImage,
       'content': content,
