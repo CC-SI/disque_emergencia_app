@@ -71,7 +71,7 @@ class CallScreen extends StatelessWidget
 			// TODO: Pegar número do contato de emergência
 			phoneNumber: '000000000',
 			icon: Image.asset('lib/assets/images/icones/contato.png'),
-			color: Colors.purple,
+			color: const Color.fromARGB(255, 239, 233, 240),
 		);
 		return CallButton(service: contactService);
 	}
@@ -100,7 +100,7 @@ class CallScreen extends StatelessWidget
 				name: 'SAMU',
 				phoneNumber: '192',
 				icon: Image.asset('lib/assets/images/icones/samu.png'),
-				color: Colors.orange,
+				color: const Color.fromARGB(255, 219, 137, 14),
 			),
 
 			// Defesa Civil
