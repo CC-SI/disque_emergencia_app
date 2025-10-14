@@ -85,21 +85,32 @@ class _HelpGuidesHomeScreenState extends State<HelpGuidesHomeScreen> {
                   ),
                 ),
                 const SizedBox(height: 8),
-                Wrap(
-                  spacing: 12,
-                  runSpacing: 12,
-                  children: firstAidGuides.asMap().entries.map((entry) {
-                    final index = entry.key;
-                    final g = entry.value;
-                    final color = aidColors[index % aidColors.length];
-                    return FirstAidGuideCard(
-                      title: g.title,
-                      subtitle: g.subtitle,
-                      coverImage: g.coverImage,
-                      color: color,
-                      onTap: () {},
+                LayoutBuilder(
+                  builder: (context, constraints) {
+                    final itemWidth = (constraints.maxWidth - 24) / 2; // duas colunas com espaçamento
+                    return Center(
+                      child: Wrap(
+                        spacing: 12,
+                        runSpacing: 12,
+                        alignment: WrapAlignment.center,
+                        children: firstAidGuides.asMap().entries.map((entry) {
+                          final index = entry.key;
+                          final g = entry.value;
+                          final color = aidColors[index % aidColors.length];
+                          return SizedBox(
+                            width: itemWidth,
+                            child: FirstAidGuideCard(
+                              title: g.title,
+                              subtitle: g.subtitle,
+                              coverImage: g.coverImage,
+                              color: color,
+                              onTap: () {},
+                            ),
+                          );
+                        }).toList(),
+                      ),
                     );
-                  }).toList(),
+                  },
                 ),
                 const SizedBox(height: 24),
                 const Text(
