@@ -70,7 +70,7 @@ class CallScreen extends StatelessWidget
 			name: 'Contato de Emergência',
 			// TODO: Pegar número do contato de emergência
 			phoneNumber: '000000000',
-			icon: Image.asset('lib/assets/images/icones/contato.png'),
+			icon: Image.asset('images/icones/contato.png'),
 			color: const Color.fromARGB(255, 31, 159, 31),
 		);
 		return CallButton(service: contactService);
@@ -83,7 +83,7 @@ class CallScreen extends StatelessWidget
 			EmergencyService(
 				name: 'Polícia',
 				phoneNumber: '190',
-				icon: Image.asset('lib/assets/images/icones/policia.png'),
+				icon: Image.asset('images/icones/policia.png'),
 				color: const Color.fromARGB(255,79, 81, 216),
 			),
 
@@ -91,7 +91,7 @@ class CallScreen extends StatelessWidget
 			EmergencyService(
 				name: 'Bombeiros',
 				phoneNumber: '193',
-				icon: Image.asset('lib/assets/images/icones/bombeiro.png'),
+				icon: Image.asset('images/icones/bombeiro.png'),
 				color: const Color.fromARGB(255, 237, 51, 51),
 			),
 
@@ -99,7 +99,7 @@ class CallScreen extends StatelessWidget
 			EmergencyService(
 				name: 'SAMU',
 				phoneNumber: '192',
-				icon: Image.asset('lib/assets/images/icones/samu.png'),
+				icon: Image.asset('images/icones/samu.png'),
 				color: const Color.fromARGB(255, 88, 154, 229),
 			),
 
@@ -107,7 +107,7 @@ class CallScreen extends StatelessWidget
 			EmergencyService(
 				name: 'Defesa Civil',
 				phoneNumber: '199',
-				icon: Image.asset('lib/assets/images/icones/defesa_civil.png'),
+				icon: Image.asset('images/icones/defesa_civil.png'),
 				color: const Color.fromARGB(255, 255, 124, 43),
 			),
 		];

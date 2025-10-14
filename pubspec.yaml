@@ -90,7 +90,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
   assets:
-    - lib/assets/images/icones/
-    - lib/assets/data/helpguides.json
-    - lib/assets/data/helpguides_md/
-    - lib/assets/images/helpguides/
+    - assets/images/icones/
+    - assets/data/helpguides.json
+    - assets/data/helpguides_md/
+    - assets/images/helpguides/
