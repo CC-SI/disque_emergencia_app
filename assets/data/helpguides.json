@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Polícia Militar",
+    "subtitle": "Ocorrências policiais",
+    "category": "emergency_contacts",
+    "cover_image": "images/helpguides/1/cover.png",
+    "content": "data/helpguides_md/1/content.md"
+  },
+  {
+    "id": 2,
+    "title": "Bombeiros",
+    "subtitle": "Casos de incêndio ou resgate",
+    "category": "emergency_contacts",
+    "cover_image": "images/helpguides/1/cover.png",
+    "content": "data/helpguides_md/2/content.md"
+  },
+  {
+    "id": 3,
+    "title": "SAMU",
+    "subtitle": "Emergências médicas",
+    "category": "emergency_contacts",
+    "cover_image": "images/helpguides/1/cover.png",
+    "content": "data/helpguides_md/3/content.md"
+  },
+  {
+    "id": 4,
+    "title": "Defesa Civil",
+    "subtitle": "Desastres e situações de risco",
+    "category": "emergency_contacts",
+    "cover_image": "images/helpguides/1/cover.png",
+    "content": "data/helpguides_md/4/content.md"
+  },
+  {
+    "id": 5,
+    "title": "queimaduras",
+    "subtitle": "Como tratar queimaduras leves",
+    "category": "first_aid",
+    "cover_image": "images/helpguides/1/cover.png",
+    "content": "data/helpguides_md/5/content.md"
+  },
+  {
+    "id": 6,
+    "title": "Engasgo",
+    "subtitle": "Técnicas para desobstruir vias respiratórias",
+    "category": "first_aid",
+    "cover_image": "images/helpguides/1/cover.png",
+    "content": "data/helpguides_md/6/content.md"
+  },
+  {
+    "id": 7,
+    "title": "Fraturas",
+    "subtitle": "Como imobilizar e socorrer corretamente",
+    "category": "first_aid",
+    "cover_image": "images/helpguides/1/cover.png",
+    "content": "data/helpguides_md/7/content.md"
+  },
+  {
+    "id": 8,
+    "title": "Afogamento",
+    "subtitle": "Procedimentos imediatos para salvar vidas",
+    "category": "first_aid",
+    "cover_image": "images/helpguides/1/cover.png",
+    "content": "data/helpguides_md/8/content.md"
+  }
+]
