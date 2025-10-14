@@ -22,14 +22,15 @@ class FirstAidGuideCard extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(16),
       child: Container(
-        width: 150,
+        height: 170,
+        width: double.infinity,
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ClipOval(
               child: Image.asset(
@@ -47,11 +48,16 @@ class FirstAidGuideCard extends StatelessWidget {
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
               ),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
+            const SizedBox(height: 4),
             Text(
               subtitle,
               textAlign: TextAlign.center,
               style: const TextStyle(color: Colors.white, fontSize: 13),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
             ),
           ],
         ),
