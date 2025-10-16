@@ -1,0 +1,34 @@
+name: desique_emergencia
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  url_launcher: ^6.2.1
+  shared_preferences: ^2.5.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # Ensures that the Material Icons font is included
+  uses-material-design: true
+
+  # SEÇÃO CORRIGIDA: Identação com 2 e 4 espaços.
+  assets:
+    - assets/
+
+  # O restante das configurações (fontes, etc.)
+  # fica aqui, se necessário.
