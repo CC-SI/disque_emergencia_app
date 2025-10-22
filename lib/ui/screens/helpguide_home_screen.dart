@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../data/models/helpguide_model.dart';
 import '../../data/repositories/helpguide_repository.dart';
-import '../components/emergency_guide_card.dart';
-import '../components/first_aid_guide_card.dart';
+import '../components/help_guide_card.dart';
 
 class HelpGuidesHomeScreen extends StatefulWidget {
-  const HelpGuidesHomeScreen({super.key});
+  final Function(String title, String contentPath, Color color) onOpenDetail;
+
+  const HelpGuidesHomeScreen({super.key, required this.onOpenDetail});
 
   @override
   State<HelpGuidesHomeScreen> createState() => _HelpGuidesHomeScreenState();
@@ -13,14 +15,6 @@ class HelpGuidesHomeScreen extends StatefulWidget {
 
 class _HelpGuidesHomeScreenState extends State<HelpGuidesHomeScreen> {
   late Future<List<HelpGuide>> guidesFuture;
-
-  final List<Color> aidColors = const [
-    Color(0xFF4CAF50), // Verde
-    Color(0xFFF44336), // Vermelho
-    Color(0xFF2196F3), // Azul
-    Color(0xFFFF9800), // Laranja
-    Color(0xFF009688), // Verde-água
-  ];
 
   @override
   void initState() {
@@ -30,14 +24,23 @@ class _HelpGuidesHomeScreenState extends State<HelpGuidesHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      backgroundColor: const Color(0xFFFFF3F3),
+      backgroundColor: const Color(0xFFEEEEEE),
       appBar: AppBar(
-        title: const Text("Guias de Ajuda"),
+        toolbarHeight: 90,
+        titleSpacing: 0,
+        title: Text(
+          "informações",
+          style: GoogleFonts.luckiestGuy(
+            fontSize: 38,
+            fontWeight: FontWeight.bold,
+            color: Colors.black87,
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        foregroundColor: Colors.black87,
       ),
       body: FutureBuilder<List<HelpGuide>>(
         future: guidesFuture,
@@ -47,77 +50,24 @@ class _HelpGuidesHomeScreenState extends State<HelpGuidesHomeScreen> {
           }
 
           final guides = snapshot.data!;
-          final emergencyGuides = guides
-              .where((g) => g.category == 'emergency_contacts')
-              .toList();
-          final firstAidGuides =
-              guides.where((g) => g.category == 'first_aid').toList();
 
           return SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            padding: const EdgeInsets.symmetric(vertical: 12),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Tipos de emergência",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                for (int i = 0; i < guides.length; i++) ...[
+                  HelpGuideCard(
+                    title: guides[i].title,
+                    icon: guides[i].icon,
+                    color: guides[i].color,
+                    alignLeft: i.isEven,
+                    onTap: () => widget.onOpenDetail(
+                      guides[i].title,
+                      guides[i].content,
+                      guides[i].color,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                Column(
-                  children: emergencyGuides.map((g) {
-                    return EmergencyGuideCard(
-                      title: g.title,
-                      subtitle: g.subtitle,
-                      coverImage: g.coverImage,
-                      onTap: () {},
-                    );
-                  }).toList(),
-                ),
-                const SizedBox(height: 24),
-                const Text(
-                  "Primeiros socorros básicos",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                LayoutBuilder(
-                  builder: (context, constraints) {
-                    final itemWidth = (constraints.maxWidth - 24) / 2; // duas colunas com espaçamento
-                    return Center(
-                      child: Wrap(
-                        spacing: 12,
-                        runSpacing: 12,
-                        alignment: WrapAlignment.center,
-                        children: firstAidGuides.asMap().entries.map((entry) {
-                          final index = entry.key;
-                          final g = entry.value;
-                          final color = aidColors[index % aidColors.length];
-                          return SizedBox(
-                            width: itemWidth,
-                            child: FirstAidGuideCard(
-                              title: g.title,
-                              subtitle: g.subtitle,
-                              coverImage: g.coverImage,
-                              color: color,
-                              onTap: () {},
-                            ),
-                          );
-                        }).toList(),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(height: 24),
-                const Text(
-                  "Essas orientações não substituem ajuda profissional.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.black54, fontSize: 13),
-                ),
+                ],
               ],
             ),
           );
