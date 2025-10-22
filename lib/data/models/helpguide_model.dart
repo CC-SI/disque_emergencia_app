@@ -1,17 +1,17 @@
+import 'package:flutter/material.dart';
+
 class HelpGuide {
   final int id;
   final String title;
-  final String subtitle;
-  final String category;
-  final String coverImage;
+  final IconData icon;
+  final Color color;
   final String content;
 
   HelpGuide({
     required this.id,
     required this.title,
-    required this.subtitle,
-    required this.category,
-    required this.coverImage,
+    required this.icon,
+    required this.color,
     required this.content,
   });
 
@@ -19,20 +19,39 @@ class HelpGuide {
     return HelpGuide(
       id: json['id'] as int,
       title: json['title'] as String,
-      subtitle: json['subtitle'] as String,
-      category: json['category'] as String,
-      coverImage: json['cover_image'] as String,
+      icon: _getIconFromName(json['icon'] as String),
+      color: _parseColor(json['color'] as String),
       content: json['content'] as String,
     );
+  }
+  
+  static IconData _getIconFromName(String? name) {
+    switch (name) {
+      case 'local_fire_department':
+        return Icons.local_fire_department;
+      case 'cardiology':
+        return Icons.heart_broken;
+      case 'flood':
+        return Icons.flood;
+      case 'local_police':
+        return Icons.local_police;
+      default:
+        return Icons.help_outline;
+    }
+  }
+
+  static Color _parseColor(String? hex) {
+    if (hex == null) return Colors.grey;
+    final cleanHex = hex.replaceAll('#', '');
+    return Color(int.parse('0xFF$cleanHex'));
   }
 
   Map<String, dynamic> toJson() {
     return {
       'id': id,
       'title': title,
-      'subtitle': subtitle,
-      'category': category,
-      'cover_image': coverImage,
+      'icon': icon,
+      'color': color,
       'content': content,
     };
   }
