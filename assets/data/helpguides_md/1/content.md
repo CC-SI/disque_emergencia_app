@@ -1,17 +1,46 @@
-## Introdução
-Quando você presencia um acidente, **manter a calma** é essencial. Este guia vai te orientar sobre os primeiros passos.
+## Siga o Passo a Passo
 
-## Passos iniciais
-1. **Verifique a segurança**: não se aproxime se houver risco.
-2. **Chame ajuda**: ligue imediatamente para o número de emergência.
-3. **Avalie a vítima**: veja se está consciente e respirando.
+**1. Ligue para os Bombeiros 193**
 
-## Técnicas importantes
-- **Hemorragias**: aplique pressão direta sobre o ferimento.
-- **Queimaduras**: lave a área com água corrente fria.
-- **Fraturas**: imobilize o membro antes de movimentar a vítima.
+Informe com clareza:
 
-![Exemplo de primeiros socorros](assets/images/helpguides/1/cover.png)
+- Local exato da ocorrência
+- Tipo de emergência (incêndio, acidente, resgate)
+- Número de vítimas e estado delas
+- Seu nome e telefone
 
-## Conclusão
-Seguir esses passos básicos pode salvar vidas enquanto a ajuda profissional chega.sss
+**2. Identifique o Perigo**
+
+- Verifique se há fogo, fumaça, risco de desabamento ou pessoas presas.
+- Mantenha a calma e afaste-se de áreas perigosas.
+
+**3. Proteja Vidas**
+
+- Se possível, desligue fontes de energia ou gás.
+- Evacue o local com segurança.
+- Não tente apagar o fogo sem preparo.
+
+**4. Aguarde a Equipe**
+
+- Mantenha o acesso livre para os bombeiros.
+- Sinalize o local e afaste curiosos.
+
+**5. Apoie o Atendimento**
+
+- Informe detalhes adicionais à equipe.
+- Siga as instruções dos bombeiros.
+- Registre o ocorrido para acompanhamento.
+
+---
+
+**Kit de Primeiros Socorros**
+
+- Luvas resistentes ao calor
+- Gaze e esparadrapo
+- Tesoura e pinça
+- Antisséptico
+- Máscara contra fumaça
+
+---
+
+> ⚠️ **Importante:** Use o app com responsabilidade. Em caso de emergência, acione os Bombeiros pelo 193 imediatamente.

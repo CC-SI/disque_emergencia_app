@@ -1,17 +1,44 @@
-## Introdução
-Quando você presencia um acidente, **manter a calma** é essencial. Este guia vai te orientar sobre os primeiros passos.
+## Siga o Passo a Passo
 
-## Passos iniciais
-1. **Verifique a segurança**: não se aproxime se houver risco.
-2. **Chame ajuda**: ligue imediatamente para o número de emergência.
-3. **Avalie a vítima**: veja se está consciente e respirando.
+**1. Ligue para o SAMU 190**
 
-## Técnicas importantes
-- **Hemorragias**: aplique pressão direta sobre o ferimento.
-- **Queimaduras**: lave a área com água corrente fria.
-- **Fraturas**: imobilize o membro antes de movimentar a vítima.
+Informe com clareza:
 
-![Exemplo de primeiros socorros](assets/images/helpguides/2/cover.png)
+- Local exato da ocorrência
+- Tipo de emergência
+- Estado da vítima
+- Seu nome e telefone
 
-## Conclusão
-Seguir esses passos básicos pode salvar vidas enquanto a ajuda profissional chega.sss
+**2. Preste Primeiros Cuidados**
+
+- Se tiver treinamento, aplique primeiros socorros.
+- Não mova a vítima sem necessidade.
+- Mantenha-a calma e segura.
+
+**3. Aguarde a Equipe**
+
+- Mantenha o local acessível.
+- Afaste curiosos e sinalize a área.
+
+**4. Apoie o Atendimento**
+
+- Forneça informações adicionais.
+- Siga as instruções dos socorristas.
+- Registre os dados do atendimento.
+
+---
+
+**Kit de Primeiros Socorros**
+
+
+**Itens essenciais:**
+
+- Luvas descartáveis
+- Gaze e esparadrapo
+- Tesoura e pinça
+- Antisséptico
+- Termômetro
+
+---
+
+> ⚠️ **Importante:** Use o app com responsabilidade. Em caso de emergência, acione o SAMU pelo 190 imediatamente.
