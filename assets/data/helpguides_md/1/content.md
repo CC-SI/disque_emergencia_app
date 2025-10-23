@@ -1,3 +1,5 @@
+![capa](images/helpguides/1/image.jpg)
+
 ## Siga o Passo a Passo
 
 **1. Ligue para os Bombeiros 193**

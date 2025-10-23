@@ -1,3 +1,5 @@
+![capa](images/helpguides/3/image.jpg)
+
 ## Passo a Passo de Denúncia
 
 **1️. Ligue para a Polícia Civil 197**

@@ -1,3 +1,5 @@
+![capa](images/helpguides/4/image.jpg)
+
 ## Passo a Passo de Segurança
 
 **1. Ligue para a Polícia Militar 190**

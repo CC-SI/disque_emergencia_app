@@ -1,3 +1,5 @@
+![capa](images/helpguides/2/image.jpg)
+
 ## Siga o Passo a Passo
 
 **1. Ligue para o SAMU 190**
