@@ -34,7 +34,6 @@ class _HelpGuidesHomeScreenState extends State<HelpGuidesHomeScreen> {
           "informações",
           style: GoogleFonts.luckiestGuy(
             fontSize: 38,
-            fontWeight: FontWeight.bold,
             color: Colors.black87,
           ),
         ),
