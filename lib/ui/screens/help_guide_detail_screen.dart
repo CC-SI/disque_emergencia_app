@@ -64,48 +64,60 @@ class _HelpGuideDetailScreenState extends State<HelpGuideDetailScreen> {
 
           return SingleChildScrollView(
             padding: const EdgeInsets.all(16.0),
-            child: MarkdownBody(
-              data: markdownData,
-              selectable: true,
-              imageBuilder: (uri, title, alt) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: Center(
-                    child: Image.asset(
-                      uri.path,
-                      width: 300,
-                      fit: BoxFit.contain,
+            child: Center(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxWidth: MediaQuery.of(context).size.width * 0.9, // 90% da tela
+                ),
+                child: MarkdownBody(
+                  data: markdownData,
+                  selectable: true,
+                  imageBuilder: (uri, title, alt) {
+                    final screenWidth = MediaQuery.of(context).size.width;
+
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 16.0),
+                      child: Center(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            uri.path,
+                            width: screenWidth * 0.9,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                  styleSheet: MarkdownStyleSheet(
+                    h1: GoogleFonts.aBeeZee(
+                      fontSize: 36,
+                      fontWeight: FontWeight.bold,
+                      color: theme.colorScheme.primary,
                     ),
+                    h2: GoogleFonts.aBeeZee(
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    h3: GoogleFonts.aBeeZee(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    p: GoogleFonts.aBeeZee(
+                      fontSize: 26,
+                      height: 1.8,
+                    ),
+                    listBullet: GoogleFonts.aBeeZee(
+                      fontSize: 0,
+                    ),
+                    listIndent: 30,
                   ),
-                );
-              },
-              styleSheet: MarkdownStyleSheet(
-                h1: GoogleFonts.aBeeZee(
-                  fontSize: 36,
-                  fontWeight: FontWeight.bold,
-                  color: theme.colorScheme.primary,
+                  listItemCrossAxisAlignment: MarkdownListItemCrossAxisAlignment.start,
+                  builders: {
+                    'li': CustomListItemBuilder(widget.color),
+                  },
                 ),
-                h2: GoogleFonts.aBeeZee(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                ),
-                h3: GoogleFonts.aBeeZee(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
-                p: GoogleFonts.aBeeZee(
-                  fontSize: 26,
-                  height: 1.8,
-                ),
-                listBullet: GoogleFonts.aBeeZee(
-                  fontSize: 0,
-                ),
-                listIndent: 30,
               ),
-              listItemCrossAxisAlignment: MarkdownListItemCrossAxisAlignment.start,
-              builders: {
-                'li': CustomListItemBuilder(widget.color),
-              },
             ),
           );
         },
