@@ -24,13 +24,13 @@ class HelpGuide {
       content: json['content'] as String,
     );
   }
-  
+
   static IconData _getIconFromName(String? name) {
     switch (name) {
       case 'local_fire_department':
         return Icons.local_fire_department_outlined;
       case 'cardiology':
-        return Icons.heart_broken_outlined;
+        return Icons.medical_services_outlined;
       case 'flood':
         return Icons.flood_outlined;
       case 'local_police':

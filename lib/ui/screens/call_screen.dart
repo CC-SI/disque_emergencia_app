@@ -71,8 +71,9 @@ class CallScreen extends StatelessWidget {
         name: 'Polícia',
         phoneNumber: '190',
         description: 'Para violência, furto, assalto',
-        icon: Image.asset('images/icones/policia.png'),
-        color: const Color.fromARGB(255, 79, 81, 216),
+        icon: Icons
+            .local_police_outlined, //Image.asset('images/icones/policia.png'),
+        color: const Color.fromARGB(220, 26, 16, 204),
       ),
 
       // Bombeiros
@@ -80,7 +81,8 @@ class CallScreen extends StatelessWidget {
         name: 'Bombeiros',
         phoneNumber: '193',
         description: 'Para violência, furto, assalto',
-        icon: Image.asset('images/icones/bombeiro.png'),
+        icon: Icons
+            .local_fire_department_outlined, //Image.asset('images/icones/bombeiro.png'),
         color: const Color.fromARGB(255, 237, 51, 51),
       ),
 
@@ -90,8 +92,9 @@ class CallScreen extends StatelessWidget {
         phoneNumber: '192',
         description:
             'Para incêndios, vazamento de gás, resgate em acidentes, afogamentos',
-        icon: Image.asset('images/icones/samu.png'),
-        color: const Color.fromARGB(255, 88, 154, 229),
+        icon: Icons
+            .medical_services_outlined, //Image.asset('images/icones/samu.png'),
+        color: const Color.fromARGB(255, 20, 135, 9),
       ),
 
       // Defesa Civil
@@ -99,7 +102,8 @@ class CallScreen extends StatelessWidget {
         name: 'Defesa Civil',
         phoneNumber: '199',
         description: 'Alagamentos, inundações, deslizamentos de terra',
-        icon: Image.asset('images/icones/defesa_civil.png'),
+        icon: Icons
+            .flood_outlined, //Image.asset('images/icones/defesa_civil.png'),
         color: const Color.fromARGB(255, 255, 124, 43),
       ),
     ];

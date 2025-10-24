@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class EmergencyService {
   final String name;
   final String phoneNumber;
-  final Image icon;
+  final IconData icon;
   final Color color;
   final String description;
 

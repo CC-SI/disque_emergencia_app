@@ -31,13 +31,19 @@ class CallButton extends StatelessWidget {
     );
 
     // Ícone
-    Image image = Image(image: service.icon.image);
+    //Image image = Image(image: service.icon.image);
+    Icon icon = Icon(
+      service.icon, // Usa o IconData vindo do modelo
+      size: 60, // Ajuste o tamanho se quiser
+      color: Colors.white, // Cor do ícone
+    );
 
     // Layout
     Column column = Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        image,
+        icon,
+        //image,
         name,
         number,
         const SizedBox(height: 5),
@@ -46,12 +52,12 @@ class CallButton extends StatelessWidget {
     );
 
     ButtonStyle style = ElevatedButton.styleFrom(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       padding: EdgeInsets.all(15),
       backgroundColor: service.color,
       foregroundColor: const Color.fromARGB(255, 255, 255, 255),
       minimumSize: Size(double.infinity, 120),
-      side: BorderSide(width: 4.0, color: Colors.grey),
+      side: BorderSide.none,
     );
 
     return Padding(
