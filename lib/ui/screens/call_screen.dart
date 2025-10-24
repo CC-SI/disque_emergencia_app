@@ -39,7 +39,7 @@ class CallScreen extends StatelessWidget {
     );*/
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFFEEEEEE),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
