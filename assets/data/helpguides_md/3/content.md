@@ -2,7 +2,7 @@
 
 ## Passo a Passo de Denúncia
 
-**1️. Ligue para a Polícia Civil 197**
+**1️. Ligue para a Polícia Civil 199**
 
 Informe com clareza:
 
@@ -46,4 +46,4 @@ Informe com clareza:
 
 ---
 
-> ⚠️ **Importante:** Use o app com responsabilidade. Em caso de crime ou suspeita, acione a Polícia Civil pelo 197 imediatamente.
+> ⚠️ **Importante:** Use o app com responsabilidade. Em caso de crime ou suspeita, acione a Polícia Civil pelo 199 imediatamente.

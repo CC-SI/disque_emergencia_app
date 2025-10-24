@@ -24,26 +24,21 @@ class CallButton extends StatelessWidget {
       service.description,
       textAlign: TextAlign.center,
       style: TextStyle(
-        fontSize: 16.0,
+        fontSize: 20.0,
         fontWeight: FontWeight.normal,
         color: Colors.white,
       ),
     );
 
     // Ícone
-    //Image image = Image(image: service.icon.image);
-    Icon icon = Icon(
-      service.icon, // Usa o IconData vindo do modelo
-      size: 60, // Ajuste o tamanho se quiser
-      color: Colors.white, // Cor do ícone
-    );
+
+    Icon icon = Icon(service.icon, size: 60, color: Colors.white);
 
     // Layout
     Column column = Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         icon,
-        //image,
         name,
         number,
         const SizedBox(height: 5),

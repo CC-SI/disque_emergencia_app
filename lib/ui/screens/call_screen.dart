@@ -20,13 +20,9 @@ class CallScreen extends StatelessWidget {
 
     SizedBox spacer = SizedBox(height: 40, width: 20);
 
-    
     Text message = Text(
       "Disque Emergência",
-      style: GoogleFonts.luckiestGuy(
-        fontSize: 38.0,
-        color: Colors.black87,
-      ),
+      style: GoogleFonts.luckiestGuy(fontSize: 38.0, color: Colors.black87),
     );
 
     /* Row firstRow = Row(
@@ -86,7 +82,7 @@ class CallScreen extends StatelessWidget {
       EmergencyService(
         name: 'Bombeiros',
         phoneNumber: '193',
-        description: 'Para violência, furto, assalto',
+        description: ' Para incêndios, vazamento de gás, afogamento, resgates',
         icon: Icons
             .local_fire_department_outlined, //Image.asset('images/icones/bombeiro.png'),
         color: const Color.fromARGB(255, 237, 51, 51),
@@ -97,7 +93,7 @@ class CallScreen extends StatelessWidget {
         name: 'SAMU',
         phoneNumber: '192',
         description:
-            'Para incêndios, vazamento de gás, resgate em acidentes, afogamentos',
+            'Para acidentes, sinais de avc, queimaduras , choque elétrico, falta de ar',
         icon: Icons
             .medical_services_outlined, //Image.asset('images/icones/samu.png'),
         color: const Color.fromARGB(255, 20, 135, 9),
@@ -107,7 +103,7 @@ class CallScreen extends StatelessWidget {
       EmergencyService(
         name: 'Defesa Civil',
         phoneNumber: '199',
-        description: 'Alagamentos, inundações, deslizamentos de terra',
+        description: ' Para alagamentos, inundações, deslizamentos de terra',
         icon: Icons
             .flood_outlined, //Image.asset('images/icones/defesa_civil.png'),
         color: const Color.fromARGB(255, 255, 124, 43),

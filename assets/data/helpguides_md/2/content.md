@@ -2,7 +2,7 @@
 
 ## Siga o Passo a Passo
 
-**1. Ligue para o SAMU 190**
+**1. Ligue para o SAMU 192**
 
 Informe com clareza:
 
@@ -43,4 +43,4 @@ Informe com clareza:
 
 ---
 
-> ⚠️ **Importante:** Use o app com responsabilidade. Em caso de emergência, acione o SAMU pelo 190 imediatamente.
+> ⚠️ **Importante:** Use o app com responsabilidade. Em caso de emergência, acione o SAMU pelo 192 imediatamente.
