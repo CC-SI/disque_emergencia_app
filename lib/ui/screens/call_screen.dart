@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/models/emergency_service.dart';
 import 'package:flutter_application_1/ui/components/call_button.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CallScreen extends StatelessWidget {
   const CallScreen({super.key});
@@ -19,13 +20,12 @@ class CallScreen extends StatelessWidget {
 
     SizedBox spacer = SizedBox(height: 40, width: 20);
 
+    
     Text message = Text(
-      "Selecione o serviço de emergência",
-      style: TextStyle(
-        fontSize: 28.0,
-        fontWeight: FontWeight.bold,
-        color: const Color.fromARGB(255, 23, 15, 15),
-        decoration: TextDecoration.none,
+      "Disque Emergência",
+      style: GoogleFonts.luckiestGuy(
+        fontSize: 38.0,
+        color: Colors.black87,
       ),
     );
 
@@ -40,14 +40,20 @@ class CallScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: const Color(0xFFEEEEEE),
+      appBar: AppBar(
+        toolbarHeight: 80,
+        titleSpacing: 0,
+        title: message,
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              const SizedBox(height: 20),
-              message,
               spacer,
               firemanButton,
               spacer,
