@@ -3,28 +3,28 @@
     "id": 1,
     "title": "BOMBEIROS",
     "icon": "local_fire_department",
-    "color": "#E05151",
+    "color": "#ed3333",
     "content": "data/helpguides_md/1/content.md"
   },
   {
     "id": 2,
     "title": "SAMU",
     "icon": "cardiology",
-    "color": "#1B971F",
+    "color": "#148709",
     "content": "data/helpguides_md/2/content.md"
   },
   {
     "id": 3,
     "title": "DEFESA CIVIL",
     "icon": "flood",
-    "color": "#F56D24",
+    "color": "#ff7c2b",
     "content": "data/helpguides_md/3/content.md"
   },
   {
     "id": 4,
     "title": "POLÍCIA MILITAR",
     "icon": "local_police",
-    "color": "#2B3F8F",
+    "color": "#1a10cc",
     "content": "data/helpguides_md/4/content.md"
   }
 ]
