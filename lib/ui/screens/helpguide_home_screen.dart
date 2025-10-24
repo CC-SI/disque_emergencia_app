@@ -28,7 +28,7 @@ class _HelpGuidesHomeScreenState extends State<HelpGuidesHomeScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFEEEEEE),
       appBar: AppBar(
-        toolbarHeight: 90,
+        toolbarHeight: 80,
         titleSpacing: 0,
         title: Text(
           "informações",
