@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class HelpGuideDetailScreen extends StatefulWidget {
   final String title;
@@ -27,7 +28,9 @@ class _HelpGuideDetailScreenState extends State<HelpGuideDetailScreen> {
   @override
   void initState() {
     super.initState();
-    _markdownFuture = rootBundle.loadString(widget.contentPath);
+    // Ajusta o caminho do markdown dependendo da plataforma
+    final markdownPath = kIsWeb ? widget.contentPath : "assets/${widget.contentPath}";
+    _markdownFuture = rootBundle.loadString(markdownPath);
   }
 
   @override
@@ -72,8 +75,10 @@ class _HelpGuideDetailScreenState extends State<HelpGuideDetailScreen> {
                 child: MarkdownBody(
                   data: markdownData,
                   selectable: true,
+                  // Ajusta o caminho da imagem dependendo da plataforma
                   imageBuilder: (uri, title, alt) {
                     final screenWidth = MediaQuery.of(context).size.width;
+                    final assetPath = kIsWeb ? uri.path : "assets/${uri.path}";
 
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
@@ -81,7 +86,7 @@ class _HelpGuideDetailScreenState extends State<HelpGuideDetailScreen> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            uri.path,
+                            assetPath,
                             width: screenWidth * 0.9,
                             fit: BoxFit.contain,
                           ),

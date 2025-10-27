@@ -94,5 +94,11 @@ flutter:
   assets:
     - assets/images/icones/
     - assets/data/helpguides.json
-    - assets/data/helpguides_md/
-    - assets/images/helpguides/
+    - assets/data/helpguides_md/1/content.md
+    - assets/data/helpguides_md/2/content.md
+    - assets/data/helpguides_md/3/content.md
+    - assets/data/helpguides_md/4/content.md
+    - assets/images/helpguides/1/image.jpg
+    - assets/images/helpguides/2/image.jpg
+    - assets/images/helpguides/3/image.jpg
+    - assets/images/helpguides/4/image.jpg
