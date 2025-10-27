@@ -31,7 +31,7 @@ class _HelpGuidesHomeScreenState extends State<HelpGuidesHomeScreen> {
         toolbarHeight: 80,
         titleSpacing: 0,
         title: Text(
-          "informações",
+          "INFORMAÇÕES",
           style: GoogleFonts.luckiestGuy(
             fontSize: 38,
             color: Colors.black87,

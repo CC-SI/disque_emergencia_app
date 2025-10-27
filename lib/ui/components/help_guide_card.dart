@@ -52,7 +52,7 @@ class HelpGuideCard extends StatelessWidget {
                           child: Text(
                             title,
                             style: const TextStyle(
-                              fontSize: 38,
+                              fontSize: 30,
                               fontWeight: FontWeight.bold,
                               color: Color(0xFFEEEEEE),
                             ),
@@ -67,7 +67,7 @@ class HelpGuideCard extends StatelessWidget {
                             title,
                             textAlign: TextAlign.right,
                             style: const TextStyle(
-                              fontSize: 38,
+                              fontSize: 30,
                               fontWeight: FontWeight.bold,
                               color: Color(0xFFEEEEEE),
                             ),

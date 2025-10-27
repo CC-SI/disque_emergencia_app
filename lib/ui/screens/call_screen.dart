@@ -21,7 +21,7 @@ class CallScreen extends StatelessWidget {
     SizedBox spacer = SizedBox(height: 40, width: 20);
 
     Text message = Text(
-      "Disque Emergência",
+      "DISQUE EMERGÊNCIA",
       style: GoogleFonts.luckiestGuy(fontSize: 38.0, color: Colors.black87),
     );
 
@@ -70,7 +70,7 @@ class CallScreen extends StatelessWidget {
     return [
       // Policia
       EmergencyService(
-        name: 'Polícia',
+        name: 'POLICIA MILITAR',
         phoneNumber: '190',
         description: 'Para violência, furto, assalto',
         icon: Icons
@@ -80,7 +80,7 @@ class CallScreen extends StatelessWidget {
 
       // Bombeiros
       EmergencyService(
-        name: 'Bombeiros',
+        name: 'BOMBEIROS',
         phoneNumber: '193',
         description: ' Para incêndios, vazamento de gás, afogamento, resgates',
         icon: Icons
@@ -101,7 +101,7 @@ class CallScreen extends StatelessWidget {
 
       // Defesa Civil
       EmergencyService(
-        name: 'Defesa Civil',
+        name: 'DEFESA CIVIL',
         phoneNumber: '199',
         description: ' Para alagamentos, inundações, deslizamentos de terra',
         icon: Icons

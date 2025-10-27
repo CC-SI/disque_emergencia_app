@@ -14,17 +14,17 @@ class CallButton extends StatelessWidget {
       service.name,
       maxLines: 1,
       overflow: TextOverflow.ellipsis,
-      style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+      style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
     );
     Text number = Text(
       service.phoneNumber,
-      style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+      style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
     );
     Text description = Text(
       service.description,
       textAlign: TextAlign.center,
       style: TextStyle(
-        fontSize: 20.0,
+        fontSize: 23.0,
         fontWeight: FontWeight.normal,
         color: Colors.white,
       ),
