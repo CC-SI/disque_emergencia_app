@@ -1,8 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/models/emergency_service.dart';
 import 'package:flutter_application_1/ui/components/call_button.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CallScreen extends StatelessWidget {
   const CallScreen({super.key});
@@ -22,7 +20,7 @@ class CallScreen extends StatelessWidget {
 
     Text message = Text(
       "DISQUE EMERGÊNCIA",
-      style: GoogleFonts.luckiestGuy(fontSize: 38.0, color: Colors.black87),
+      style: const TextStyle(fontFamily: 'LuckiestGuy', fontSize: 38.0, color: Colors.black87),
     );
 
     /* Row firstRow = Row(

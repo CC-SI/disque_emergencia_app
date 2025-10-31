@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../data/models/helpguide_model.dart';
 import '../../data/repositories/helpguide_repository.dart';
 import '../components/help_guide_card.dart';
@@ -32,7 +31,8 @@ class _HelpGuidesHomeScreenState extends State<HelpGuidesHomeScreen> {
         titleSpacing: 0,
         title: Text(
           "INFORMAÇÕES",
-          style: GoogleFonts.luckiestGuy(
+          style: const TextStyle(
+            fontFamily: 'LuckiestGuy',
             fontSize: 38,
             color: Colors.black87,
           ),

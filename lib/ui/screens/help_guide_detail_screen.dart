@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter/foundation.dart' show kIsWeb;
@@ -95,24 +94,28 @@ class _HelpGuideDetailScreenState extends State<HelpGuideDetailScreen> {
                     );
                   },
                   styleSheet: MarkdownStyleSheet(
-                    h1: GoogleFonts.aBeeZee(
+                    h1: const TextStyle(
+                      fontFamily: 'aBeeZee',
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
-                      color: theme.colorScheme.primary,
                     ),
-                    h2: GoogleFonts.aBeeZee(
+                    h2: const TextStyle(
+                      fontFamily: 'aBeeZee',
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
                     ),
-                    h3: GoogleFonts.aBeeZee(
+                    h3: const TextStyle(
+                      fontFamily: 'aBeeZee',
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
                     ),
-                    p: GoogleFonts.aBeeZee(
+                    p: const TextStyle(
+                      fontFamily: 'aBeeZee',
                       fontSize: 26,
                       height: 1.8,
                     ),
-                    listBullet: GoogleFonts.aBeeZee(
+                    listBullet: const TextStyle(
+                      fontFamily: 'aBeeZee',
                       fontSize: 0,
                     ),
                     listIndent: 30,
